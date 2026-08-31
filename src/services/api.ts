@@ -4,7 +4,7 @@ export const API_URL = "https://script.google.com/macros/s/AKfycbzrcN1PZYfWv911n
 
 export interface ApiPayload {
   action: "GET_ALL" | "CREATE" | "UPDATE" | "DELETE";
-  sheet: "ARTICULOS" | "PAQUETES" | "PAQUETE_DETALLE" | "COTIZACIONES" | "COTIZACION_DETALLE";
+  sheet: string;
   id?: string;
   data?: any;
 }
