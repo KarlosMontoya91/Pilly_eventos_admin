@@ -204,3 +204,56 @@ h1, h2, h3, h4, h5, h6 {
 .table tbody tr:hover {
   background-color: var(--pilly-paper);
 }
+
+/* Responsive Utilities */
+.mobile-only-btn {
+  display: none;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    z-index: 100;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 90;
+    backdrop-filter: blur(2px);
+  }
+
+  .mobile-only-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .topbar {
+    padding: 0 1rem;
+  }
+
+  .page-content {
+    padding: 1rem;
+  }
+}
