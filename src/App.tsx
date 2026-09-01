@@ -6,6 +6,7 @@ import Catalog from './pages/Catalog';
 import Packages from './pages/Packages';
 import Configuracion from './pages/Configuracion';
 import Prices from './pages/Prices';
+import NewQuote from './pages/NewQuote';
 import PlaceholderPage from './pages/PlaceholderPage';
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="articulos" element={<Catalog />} />
           <Route path="paquetes" element={<Packages />} />
-          <Route path="cotizar" element={<PlaceholderPage title="Nueva Cotización" />} />
+          <Route path="cotizar" element={<NewQuote />} />
           <Route path="cotizaciones" element={<PlaceholderPage title="Cotizaciones" />} />
           <Route path="precios" element={<Prices />} />
           <Route path="promociones" element={<PlaceholderPage title="Promociones" />} />
