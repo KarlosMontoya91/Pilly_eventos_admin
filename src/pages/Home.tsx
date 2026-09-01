@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <h1 style={{ color: 'var(--pilly-pink)' }}>¡Bienvenido a Pilly Eventos Admin!</h1>
@@ -12,17 +15,35 @@ const Home = () => {
         <div className="card" style={{ borderTop: '4px solid var(--pilly-turquoise)' }}>
           <h3 style={{ margin: '0 0 0.5rem 0' }}>Nueva Cotización</h3>
           <p className="text-muted">Inicia una cotización en blanco para un cliente.</p>
-          <button className="btn btn-primary" style={{ marginTop: '1rem', width: '100%' }}>Comenzar</button>
+          <button 
+            className="btn btn-primary" 
+            style={{ marginTop: '1rem', width: '100%' }}
+            onClick={() => navigate('/cotizar')}
+          >
+            Comenzar
+          </button>
         </div>
         <div className="card" style={{ borderTop: '4px solid var(--pilly-pink)' }}>
           <h3 style={{ margin: '0 0 0.5rem 0' }}>Artículos</h3>
           <p className="text-muted">Gestiona tu catálogo de productos individuales.</p>
-          <button className="btn btn-outline" style={{ marginTop: '1rem', width: '100%' }}>Ver catálogo</button>
+          <button 
+            className="btn btn-outline" 
+            style={{ marginTop: '1rem', width: '100%' }}
+            onClick={() => navigate('/articulos')}
+          >
+            Ver catálogo
+          </button>
         </div>
         <div className="card" style={{ borderTop: '4px solid var(--pilly-yellow)' }}>
           <h3 style={{ margin: '0 0 0.5rem 0' }}>Paquetes</h3>
           <p className="text-muted">Crea o modifica los paquetes compuestos.</p>
-          <button className="btn btn-outline" style={{ marginTop: '1rem', width: '100%' }}>Ver paquetes</button>
+          <button 
+            className="btn btn-outline" 
+            style={{ marginTop: '1rem', width: '100%' }}
+            onClick={() => navigate('/paquetes')}
+          >
+            Ver paquetes
+          </button>
         </div>
       </div>
     </div>
